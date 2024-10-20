@@ -18,8 +18,11 @@ This repository implements an ERC-6551 token-bound account system, enabling user
 │
 ├── src/
 │   └── NFTSwap.sol                 // Main smart contract handling NFT swaps
-│
-├── .gitignore                      // Configuration to ignore unnecessary files in version control
+│   ├── ERC6551Registry.sol         // ERC-6551 registry contract
+|   ├── TBAFactory.sol              // Factory contract to deploy token-bound accounts
+|   ├── TokenBoundAccount.sol       // Token bound account logic (ERC-6551)
+|   └── SwapExecutor.sol            // Smart contract to execute swaps via TBA
+├── .gitignore                      // Configuration to ignore unnecessary files in vc
 ├── .gitmodules                     // Git submodules configuration
 ├── deployArgs.json                 // Deployment parameters for the smart contracts
 ├── foundry.toml                    // Foundry configuration file for Solidity development
@@ -88,3 +91,4 @@ In both cases, set the `EntryPoint` contract address as `0x5FF137D4b0FDCD49DcA30
 This address is the same on all chains it is deployed to.
 
 
+   
