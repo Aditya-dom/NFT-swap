@@ -1,3 +1,33 @@
+
+# NFT Swap Project
+
+This repository implements an ERC-6551 token-bound account system, enabling users to swap NFTs and tokens directly from the wallet tied to their NFTs. It leverages thirdweb for contract deployment, along with a flexible design allowing swaps on Uniswap or other DEXs.
+
+## Features
+
+- **ERC-6551 Integration**: Manages assets via token-bound accounts.
+- **Swap Executor**: Facilitates token swapping through decentralized exchanges.
+- **Modular Contract Deployment**: Contracts are deployable with thirdweb's deployment suite.
+
+## Prerequisites
+
+- [Foundry](https://getfoundry.sh/) (for contract development and testing)
+- Node.js and npm (for interacting scripts)
+- Thirdweb CLI for contract deployment
+
+
+### Swapping Tokens
+
+Utilize the `swapWithTBA.js` script for executing swaps from a token-bound account.
+
+## Contract Overview
+
+- `ERC6551Registry.sol`: ERC-6551 registry to create token-bound accounts.
+- `TBAFactory.sol`: Factory contract for deploying accounts.
+- `SwapExecutor.sol`: Facilitates token swaps via connected accounts.
+
+## Getting Started
+
 ```bash
 npx thirdweb create --contract --template erc-6551
 ```
